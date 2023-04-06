@@ -10,7 +10,9 @@ namespace MinimalApi.MapperProfiles
         {
             //src -> target
             CreateMap<Command, CommandReadDto>();
-            CreateMap<CommandCreateDto, Command>();
+            CreateMap<CommandCreateDto, Command>().ForMember(
+                dest => dest.Id,
+                opt => opt.MapFrom(_ => Guid.NewGuid()));
             CreateMap<CommandUpdateDto, Command>();
         }
     }

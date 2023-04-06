@@ -1,4 +1,4 @@
-_.NET | ASP.NET Core | API | Minimal APIs | Entity Framework | SQLite_
+_.NET | ASP.NET Core | API | Minimal APIs | Entity Framework | SQLite | AutoMapper_
 
 ## Introduction
 Trying out .NET minimal API, comparing it to ASP.NET MVC controller based API. This is for exploratory and learning purposes. 

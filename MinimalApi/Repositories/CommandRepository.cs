@@ -13,7 +13,7 @@ namespace MinimalApi.Repositories
             _dbContext = dbContext;
         }
         
-        public async Task CreateCommand(Command command)
+        public async Task CreateCommandAsync(Command command)
         {
             if(command == null)
             {
@@ -33,17 +33,17 @@ namespace MinimalApi.Repositories
             _dbContext.Commands.Remove(command);
         }
 
-        public async Task<Command?> GetCommandById(Guid id)
+        public async Task<Command?> GetCommandByIdAsync(Guid id)
         {
             return await _dbContext.Commands.FirstOrDefaultAsync(c => c.Id == id);
         }
 
-        public async Task<IEnumerable<Command>> GetCommands()
+        public async Task<IEnumerable<Command>> GetCommandsAsync()
         {
             return await _dbContext.Commands.ToListAsync();
         }
 
-        public async Task SaveChanges()
+        public async Task SaveChangesAsync()
         {
             await _dbContext.SaveChangesAsync();
         }

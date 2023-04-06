@@ -4,10 +4,10 @@ namespace MinimalApi.Repositories
 {
     public interface ICommandRepository
     {
-        Task SaveChanges();
-        Task<Command?> GetCommandById(Guid id);
-        Task<IEnumerable<Command>> GetCommands();
-        Task CreateCommand(Command command);
+        Task SaveChangesAsync();
+        Task<Command?> GetCommandByIdAsync(Guid id);
+        Task<IEnumerable<Command>> GetCommandsAsync();
+        Task CreateCommandAsync(Command command);
 
         void DeleteCommand(Command command);
     }
